@@ -1,0 +1,27 @@
+apiVersion: core.syntixi.dev/v1
+kind: Function
+metadata:
+  name: function3
+spec:
+  bundle:
+    entry: string
+    name: string
+  image: {{ .Values.function3.image }}
+  resources:
+    limits:
+      cpu: 200m
+      memory: 256Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+  scaleStrategy:
+    minScale: 1
+    maxScale: 3
+    targetCPUPercent: 80
+  secrets:
+  - string
+  configmaps:
+  - string
+  specializationTimeout: 120
+  executionTimeout: 60
+  idleTimeout: 120
