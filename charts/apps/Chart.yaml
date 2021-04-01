@@ -1,0 +1,7 @@
+apiVersion: v2
+name: apps
+version: 1.0.0
+dependencies:
+  - name: apps
+    version: 1.0.0
+    repository: https://github.com/FantasmaMeoW/argo-helm-demo.git
